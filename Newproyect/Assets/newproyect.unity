@@ -884,7 +884,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press up / Click 2 PLAY
+  m_Text: Press up / Click to PLAY with me
 --- !u!222 &2067287392
 CanvasRenderer:
   m_ObjectHideFlags: 0
