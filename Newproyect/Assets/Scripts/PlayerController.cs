@@ -5,9 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Animator animator;
+    private AudioSource audioPlayer;
+
+    public AudioClip jumpClip;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioPlayer = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
     }
 
