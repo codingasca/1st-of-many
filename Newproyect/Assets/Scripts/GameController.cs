@@ -14,6 +14,8 @@ public class GameController : MonoBehaviour
 
     public enum GameState {Idle, Playing};
     public GameState gameState = GameState.Idle;
+    
+    public GameObject player;
 
 
 
@@ -32,6 +34,7 @@ public class GameController : MonoBehaviour
         if (gameState == GameState.Idle && (Input.GetKeyDown("up")  || Input.GetMouseButtonDown(0))){
             gameState = GameState.Playing;
                 uiIdle.SetActive(false);
+                player.sendMessage("UpdateState","PlayerRun")
         }
 
         
@@ -42,6 +45,7 @@ public class GameController : MonoBehaviour
         
 
     }
+    //
     void Parallax() {
         float finalSpeed = parallaxSpeed * Time.deltaTime;
         background.uvRect = new Rect(background.uvRect.x + finalSpeed, 0f, 1f, 1f);
