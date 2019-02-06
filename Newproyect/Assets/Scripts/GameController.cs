@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     public GameState gameState = GameState.Idle;
     
     public GameObject player;
+    public GameObject enemyGenerator;
 
 
 
@@ -35,6 +36,7 @@ public class GameController : MonoBehaviour
             gameState = GameState.Playing;
                 uiIdle.SetActive(false);
                 player.SendMessage("UpdateState","PlayerRun");
+                enemyGenerator.SendMessage("StartGenerator");
         }
 
         
