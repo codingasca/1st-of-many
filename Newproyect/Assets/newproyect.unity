@@ -149,6 +149,7 @@ MonoBehaviour:
   platform: {fileID: 878682958}
   uiIdle: {fileID: 1475891646}
   gameState: 0
+  player: {fileID: 437614155}
 --- !u!114 &11614032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +244,7 @@ GameObject:
   - component: {fileID: 437614156}
   - component: {fileID: 437614157}
   - component: {fileID: 437614158}
+  - component: {fileID: 437614159}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -332,6 +334,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &437614159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437614155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e9ea261e3f5eb84297e6ddf7522abe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,8 +561,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.6, y: 0}
-  m_SizeDelta: {x: -60.7, y: 0}
+  m_AnchoredPosition: {x: -0.94, y: 0}
+  m_SizeDelta: {x: -185.23, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &862803684
 MonoBehaviour:
