@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afcc421f89becdb4290d73c6e1bf206f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxSpeed: 0.039
+  parallaxSpeed: 0.2
   background: {fileID: 1880867294}
   platform: {fileID: 878682958}
   uiIdle: {fileID: 1475891646}
