@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
         if (gameState == GameState.Idle && (Input.GetKeyDown("up")  || Input.GetMouseButtonDown(0))){
             gameState = GameState.Playing;
                 uiIdle.SetActive(false);
-                player.sendMessage("UpdateState","PlayerRun")
+                player.SendMessage("UpdateState","PlayerRun");
         }
 
         

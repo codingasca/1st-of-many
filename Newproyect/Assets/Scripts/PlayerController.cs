@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public void UpdateState(String state = null){
+    public void UpdateState(string state = null){
         if(state != null){
             animator.Play(state);
         }
