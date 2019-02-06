@@ -6,6 +6,11 @@ public class PlayerController : MonoBehaviour
 {
     public GameObject game;
     private Animator animator;
+    public AudioClip jumpClip;
+    public AudioClip dieClip;
+
+    private AudioSource audioPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
