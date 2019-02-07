@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         musicPlayer = GetComponent<AudioSource>();
+
         
     }
 
