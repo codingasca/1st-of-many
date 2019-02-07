@@ -19,6 +19,10 @@ public class GameController : MonoBehaviour
     
     public GameObject player;
     public GameObject enemyGenerator;
+
+    public float scaleTime = 6f;
+    public float scaleInc = .25f; 
+
     private AudioSource musicPlayer;
 
 
@@ -42,7 +46,8 @@ public class GameController : MonoBehaviour
                 uiIdle.SetActive(false);
                 player.SendMessage("UpdateState","PlayerRun");
                 enemyGenerator.SendMessage("StartGenerator");
-            musicPlayer.Play();
+                musicPlayer.Play();
+                InvokeRepeating("GameTimeScale",scaleTime,scaleTime);
         }
 
         
@@ -68,5 +73,15 @@ public class GameController : MonoBehaviour
     }
     public void RestartGame(){
         SceneManager.LoadScene("Principal");
+        ResetTimeScale();
+    }
+    public void GameTimeScale(){
+        Time.timeScale += scaleInc;
+        Debug.Log("Ritmo incremetado: " + Time.timeScale.ToString());
+    }
+    public void ResetTimeScale(float newTimeScale = 1f){
+        CancelInvoke("GameTimeScale");
+        Time.timeScale = newTimeScale;
+        Debug.Log("Ritmo de juego restablecido");
     }
 }
