@@ -493,6 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game: {fileID: 11614030}
+  enemyGenerator: {fileID: 275086025}
   jumpClip: {fileID: 8300000, guid: 9f35c634691ba1f4b9398730c69895fb, type: 3}
   dieClip: {fileID: 8300000, guid: 802ea66970c4bba42974ac5ef33e2658, type: 3}
 --- !u!61 &437614160

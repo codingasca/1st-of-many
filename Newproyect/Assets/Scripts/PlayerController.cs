@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject game;
+    public GameObject enemyGenerator;
     private Animator animator;
     public AudioClip jumpClip;
     public AudioClip dieClip;
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Enemy"){
             UpdateState("PlayerDie");
             game.GetComponent<GameController>().gameState = GameState.Ended;
+            enemyGenerator.SendMessage("CancelGenerator", true);
         }
     }
 }
