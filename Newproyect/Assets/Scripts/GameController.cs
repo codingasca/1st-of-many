@@ -13,6 +13,8 @@ public class GameController : MonoBehaviour
     public RawImage background;
     public RawImage platform;
     public GameObject uiIdle;
+    public GameObject uiScore;
+    public Text pointsText;
 
     
     public GameState gameState = GameState.Idle;
@@ -25,6 +27,7 @@ public class GameController : MonoBehaviour
 
     private AudioSource musicPlayer;
 
+    private int points = 0;
 
 
 
@@ -44,6 +47,7 @@ public class GameController : MonoBehaviour
         if (gameState == GameState.Idle && (userAction)){
             gameState = GameState.Playing;
                 uiIdle.SetActive(false);
+                uiScore.SetActive(true);
                 player.SendMessage("UpdateState","PlayerRun");
                 enemyGenerator.SendMessage("StartGenerator");
                 player.SendMessage("DustPlay");
@@ -84,5 +88,9 @@ public class GameController : MonoBehaviour
         CancelInvoke("GameTimeScale");
         Time.timeScale = newTimeScale;
         Debug.Log("Ritmo de juego restablecido");
+    }
+    public void IncreasePoints(){
+        points++;
+        pointsText.text = points.ToString();
     }
 }
