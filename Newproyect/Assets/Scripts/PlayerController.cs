@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     public AudioClip jumpClip;
     public AudioClip dieClip;
+    
+    public ParticleSystem dust;
 
     private AudioSource audioPlayer;
     private float startY;
@@ -47,7 +49,7 @@ public class PlayerController : MonoBehaviour
             game.GetComponent<GameController>().gameState = GameState.Ended;
             enemyGenerator.SendMessage("CancelGenerator", true);
             game.SendMessage("ResetTimeScale",0.5f);
-
+            DustStop();
             game.GetComponent<AudioSource>().Stop();
             audioPlayer.clip = dieClip;
             audioPlayer.Play();
@@ -55,5 +57,12 @@ public class PlayerController : MonoBehaviour
     }
     void GameReady(){
         game.GetComponent<GameController>().gameState = GameState.Ready;
+    }
+
+    void DustPlay(){
+        dust.Play();
+    }
+    void DustStop(){
+        dust.Stop();
     }
 }
